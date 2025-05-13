@@ -1,0 +1,15 @@
+12 May 2025 
+Basic data analyst project: Walmart
+Learnt some functions from pandas, metaplotlib and seaborn 
+
+Some important lines: df.info(), df.head(), df.describe()
+df['Date'}= df.to_datetime(df.['Date'))
+xxx= df.groupby('City')['Total'].sum()
+xxx.plot(kind='bar', title='Monthly Revenue')
+plt.ylabel('ccc')
+ply.xlabel('aaa')
+plt.show()
+
+13 May 2025
+Basic Power BI
+
