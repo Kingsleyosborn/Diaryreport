@@ -25,6 +25,52 @@ Making some charts using PowerBI and data is still from 12 May 2025 (Walmart)
 9 Jyly 2025
 Recap: finish Finc 6601 and Acct 6621
 New course Finc 6602 and Econ 6644
-Stock with dividend cal: P=  ∑ Coupon/(1+r)^t +Par/(1+r)^N 
+Stock/Bond with dividend cal: P=  ∑ Coupon/(1+r)^t +Par/(1+r)^N 
+Zero coupon Bond price: p = c/(1+R)^t
+
+Yield to Maturity (YTM) — Semiannual Bond
+=RATE(nper, pmt, pv, fv, type) * 2   (excel)
+nper = total number of semiannual periods = 2*N
+pmt = semiannual coupon payment = Annual Coupon /2
+​pv = present value (price), entered as negative (you’re paying it)
+fv = face/par value (usually 1000)
+type = 0 (payments at end of each period)
+* 2 = multiply final result by 2 to get quoted annual YTM
+
+Example
+Price = $980
+Par = $1,000
+Annual Coupon = 8% ⇒ $80/year ⇒ $40/semiannual
+Maturity = 10 years ⇒ 20 periods
+=RATE(20, 40, -980, 1000, 0) * 2
+YTM = 8.27%
 
 
+Bond Price — Semiannual Coupon Bond
+=PV(rate, nper, pmt, fv, type)
+rate = semiannual YTM = Annual YTM/2
+nper = total semiannual periods = 2×N
+pmt = semiannual coupon = Annual Coupon/2 , entered as negative
+fv = par value, also negative (cash out at maturity)
+type = 0
+
+Same bond as above, but now assume YTM is 9%:
+r = 9% ⇒ r/2=4.5% per period
+Semiannual coupon = $40
+20 periods
+FV = $1,000
+=PV(0.09/2, 20, -40, -1000, 0)
+Price = $935.82
+
+Weighted-Average Cost of Capital (WACC)
+WACC= wE​rE ​+ wD​rD​(1−Tc​)
+Find market weights E/V and D/V. 
+Compute cost of equity via CAPM
+After-tax cost of debt 
+Combine.
+
+Profitability Index (PI)
+PI= PV of outflows / PV of inflows ​
+Discount each positive CF → sum.
+Discount each negative CF → sum (use absolute value).
+Ratio > 1 ⇒ NPV > 0.
