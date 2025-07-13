@@ -74,3 +74,7 @@ PI= PV of outflows / PV of inflows ​
 Discount each positive CF → sum.
 Discount each negative CF → sum (use absolute value).
 Ratio > 1 ⇒ NPV > 0.
+
+14 July (Game development)
+Download Godot
+Learn basic 2D character setting, platform, collision setting
